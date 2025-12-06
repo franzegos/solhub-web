@@ -7,7 +7,7 @@ import ProjectGrid from "@/components/ProjectGrid";
 import { Skeleton } from "@/components/ui/skeleton";
 import { usePlatforms } from "@/hooks/use-platforms";
 import { transformPlatformToProject } from "@/lib/platform-utils";
-import { AlertCircle, RefreshCw } from "lucide-react";
+import { AlertCircle, RefreshCw, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -207,6 +207,21 @@ const Index = () => {
             >
               Buy him a coffee or lambo
             </a>
+          </p>
+          <p className="mt-4 flex items-center justify-center gap-2">
+            <Github className="h-4 w-4" />
+            <a
+              href="https://github.com/franzegos/solhub-web"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary hover:underline hover:transition-colors"
+            >
+              View on GitHub
+            </a>
+            <span className="text-muted-foreground">•</span>
+            <span className="text-muted-foreground">
+              Contributions welcome!
+            </span>
           </p>
         </div>
       </footer>
