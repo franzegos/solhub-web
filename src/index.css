@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 160 100% 51%;
+    --primary-foreground: 240 10% 4%;
+
+    --secondary: 270 100% 63%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 6% 12%;
+    --muted-foreground: 240 5% 60%;
+
+    --accent: 240 6% 15%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 15%;
+    --input: 240 6% 15%;
+    --ring: 160 100% 51%;
+
+    --radius: 0.75rem;
+
+    /* Solana brand colors */
+    --solana-teal: 160 100% 51%;
+    --solana-purple: 270 100% 63%;
+    --solana-gradient: linear-gradient(135deg, hsl(160 100% 51%) 0%, hsl(270 100% 63%) 100%);
+    --solana-gradient-hover: linear-gradient(135deg, hsl(160 100% 56%) 0%, hsl(270 100% 68%) 100%);
+    
+    /* Glass effect */
+    --glass-bg: 240 10% 8% / 0.6;
+    --glass-border: 240 6% 20%;
+    
+    /* Tag colors */
+    --tag-memecoin: 45 100% 50%;
+    --tag-dapp: 200 100% 50%;
+    --tag-launchpad: 340 100% 60%;
+    --tag-defi: 120 100% 40%;
+    --tag-nft: 280 100% 60%;
+    --tag-default: 240 5% 40%;
+
+    --sidebar-background: 240 10% 6%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 160 100% 51%;
+    --sidebar-primary-foreground: 240 10% 4%;
+    --sidebar-accent: 240 6% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 6% 15%;
+    --sidebar-ring: 160 100% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .solana-gradient {
+    background: var(--solana-gradient);
+  }
+  
+  .solana-gradient-text {
+    background: var(--solana-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-card {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--glass-border));
+  }
+  
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300;
+  }
+  
+  .glass-card-hover:hover {
+    background: hsl(240 10% 10% / 0.8);
+    border-color: hsl(var(--solana-teal) / 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -12px hsl(var(--solana-teal) / 0.15);
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .glow-teal {
+    box-shadow: 0 0 30px -5px hsl(var(--solana-teal) / 0.4);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 30px -5px hsl(var(--solana-purple) / 0.4);
+  }
+}
