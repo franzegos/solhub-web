@@ -14,11 +14,12 @@ const Header = () => {
             </span> */}
           </div>
 
-          <nav className="hidden md:flex items-center gap-4">
+          <nav className="flex items-center gap-4">
             <Button
               asChild
               variant="default"
-              className="w-full sm:w-auto group relative overflow-hidden solana-gradient hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
+              size="sm"
+              className="group relative overflow-hidden solana-gradient hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
             >
               <a
                 href="https://github.com/jup-ag/platform-list?tab=readme-ov-file#contributing"
@@ -26,8 +27,9 @@ const Header = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
               >
-                <PlusSquareIcon className="h-5 w-5 transition-transform" />
-                <span>Add your Project</span>
+                <PlusSquareIcon className="h-4 w-4 md:h-5 md:w-5 transition-transform" />
+                <span className="hidden sm:inline">Add your Project</span>
+                <span className="sm:hidden">Add</span>
               </a>
             </Button>
           </nav>

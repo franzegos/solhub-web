@@ -171,7 +171,7 @@ const ProjectCard = ({ project, index, highlightedTags }: ProjectCardProps) => {
           )}
           {defiLlamaId && (
             <a
-              href={`https://defillama.com/protocols/${defiLlamaId}`}
+              href={`https://defillama.com/protocol/${defiLlamaId}`}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg bg-muted/30 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
