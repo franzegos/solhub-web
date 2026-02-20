@@ -59,13 +59,11 @@ git checkout -b feature/your-feature-name
 ```
 
 3. **Make your changes**
-
    - Follow the existing code style
    - Add comments for complex logic
    - Update documentation if needed
 
 4. **Test your changes**
-
    - Ensure the app runs without errors
    - Test the functionality you've added/modified
 
@@ -101,11 +99,9 @@ git push origin feature/your-feature-name
 Solhub displays projects from the [Jupiter Platform List SDK](https://github.com/jup-ag/platform-list). To add your Solana project to this directory:
 
 1. **Visit the Jupiter Platform List repository**
-
    - Go to [github.com/jup-ag/platform-list](https://github.com/jup-ag/platform-list)
 
 2. **Submit your project**
-
    - Open a Pull Request to add your platform to the SDK
    - Follow the repository's contribution guidelines
    - Include all required information (name, tags, links, logo, etc.)
